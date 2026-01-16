@@ -4,9 +4,7 @@
  * @return {Promise}
  */
 var addTwoPromises = async function(promise1, promise2) {
-    // Serial Processing
-    let val1 = await promise1;
-    let val2 = await promise2;
+    let [val1, val2] = await Promise.all([promise1, promise2]); // Parallel Processing
     return val1 + val2;
 };
 
