@@ -4,9 +4,9 @@
  */
 var expect = function(val) {
     function errorFunc(msg) {
-        throw Error(msg)
+        throw new Error(msg)
     }
-    var ans = {
+    const ans = {
         toBe : (val2) => {return (val === val2) ? true : errorFunc("Not Equal")},
         notToBe : (val2) => {return (val !== val2) ? true : errorFunc("Equal")}
     }
