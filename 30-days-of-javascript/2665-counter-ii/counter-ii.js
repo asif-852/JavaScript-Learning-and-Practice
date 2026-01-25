@@ -4,7 +4,7 @@
  */
 var createCounter = function(init) {
     let curr = init
-    var ans = {
+    const ans = {
         increment : () => {return ++curr},
         decrement : () => {return --curr},
         reset : () => {return curr = init}
